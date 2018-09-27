@@ -1,0 +1,37 @@
+{
+  "name": "envinject",
+  "version": "1.0.0",
+  "description": "Environment variables injector",
+  "main": "./build/index.js",
+  "preferGlobal": true,
+  "bin": "./build/index.js",
+  "scripts": {
+    "build": "./node_modules/typescript/bin/tsc",
+    "execute": "npm run build && node build/index.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/sirarthurnell/envinject.git"
+  },
+  "keywords": [
+    "environment",
+    "variables",
+    "file",
+    "inject",
+    "replace",
+    "injector"
+  ],
+  "author": "Arturo Medina",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/sirarthurnell/envinject/issues"
+  },
+  "homepage": "https://github.com/sirarthurnell/envinject#readme",
+  "devDependencies": {
+    "@types/node": "^10.11.2",
+    "typescript": "^3.1.1"
+  },
+  "dependencies": {
+    "commander": "^2.18.0"
+  }
+}

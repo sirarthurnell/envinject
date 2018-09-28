@@ -1,5 +1,9 @@
 # Envinject
-Envinject is just a small utility to replace all the environment variables found in a text file with their values.
+Envinject is just a small utility to replace all the environment variables found in a text file with their values. Install it with the following command:
+
+```
+npm i envinject
+```
 
 ## Usage
 Let's suppose you have an environment variable called `server` and you want to include its value in several places inside a text file. Simply write the name of the environment variable starting with `$` and run envinject:

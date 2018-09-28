@@ -32,7 +32,7 @@ import * as fs from 'fs';
         process.exitCode = 0;
       },
       err => {
-        console.log('An error has occurred: ' + err);
+        console.log('An error has occurred: ' + JSON.stringify(err));
         process.exitCode = 1;
       }
     );

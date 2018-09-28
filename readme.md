@@ -2,7 +2,7 @@
 Envinject is just a small utility to replace all the environment variables found in a text file with their values. Install it with the following command:
 
 ```
-npm i envinject
+npm i -g envinject
 ```
 
 ## Usage

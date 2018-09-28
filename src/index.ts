@@ -29,11 +29,11 @@ import * as fs from 'fs';
     .subscribe(
       _ => {
         console.log('Done.');
-        process.exit(0);
+        process.exitCode = 0;
       },
       err => {
         console.log('An error has occurred: ' + err);
-        process.exit(1);
+        process.exitCode = 1;
       }
     );
 })();

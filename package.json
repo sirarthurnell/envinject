@@ -6,8 +6,8 @@
   "preferGlobal": true,
   "bin": "./build/index.js",
   "scripts": {
-    "build": "./node_modules/typescript/bin/tsc",
-    "execute": "npm run build && node build/index.js"
+    "build": "node ./node_modules/typescript/bin/tsc",
+    "execute": "npm run build && node ./build/index.js"
   },
   "repository": {
     "type": "git",
@@ -32,6 +32,7 @@
     "typescript": "^3.1.1"
   },
   "dependencies": {
-    "commander": "^2.18.0"
+    "commander": "^2.18.0",
+    "rxjs": "^6.3.3"
   }
 }

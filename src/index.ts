@@ -9,9 +9,26 @@ import * as fs from 'fs';
  * Entry point.
  */
 (function main() {
-  const program = commander.version('1.0.0').parse(process.argv);
+  let fileToParse = '';
+  const program = commander
+    .version('1.0.0')
+    .command('envinject <file>')
+    .action((file: string) => fileToParse = file)
+    .parse(process.argv);
 
-  const fileName = program.args[0];
+  if(!fileToParse) {
+    console.error('No file specified!');
+    process.exitCode = 1;
+  } else {
+    parseFile(fileToParse);
+  }
+})();
+
+/**
+ * Parses the specified file.
+ * @param fileName File to parse.
+ */
+function parseFile(fileName: string): void {
   const readAsObservable = bindNodeCallback(
     (
       path: string,
@@ -36,7 +53,7 @@ import * as fs from 'fs';
         process.exitCode = 1;
       }
     );
-})();
+}
 
 /**
  * Text with environment variables to replace with
